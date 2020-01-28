@@ -21,12 +21,12 @@ Note: Jquery needed
     element: String,
     /*
       Fuction invoqued when the scroll reach the top or bottom limit.
-      Returns the limit as a string 'top' or 'bottom'
+      Returns the limit as a string 'top', 'bottom' or 'v_center
     */
     vertical: Function,
     /*
       Fuction invoqued when the scroll reach the left or right limit.
-      Returns the limit as a string 'left' or 'right'
+      Returns the limit as a string 'left', 'right' or 'h_center'
     */
     horizontal: Function
   }
@@ -42,16 +42,16 @@ Note: Jquery needed
   scrollLimits.detectLimit({
     element: '#element-to-scroll',
     vertical: function (limit) {
-      console.log(limit) // 'top' or 'bottom'
+      console.log(limit) // 'top', 'bottom' or 'v_center'
     },
     horizontal: function (limit) {
-      console.log(limit) // 'left' or 'right'
+      console.log(limit) // 'left', 'right' or 'h_center'
     },
   })
   
   scrollLimits.detectLimit({
     element: '.elements', // detect the behavior of the first element found
-    vertical: (limit) => { console.log(limit) }, // 'top' or 'bottom'
-    horizontal: (limit) => { console.log(limit) }, // 'left' or 'right' 
+    vertical: (limit) => { console.log(limit) }, // 'top', 'bottom' or 'v_center'
+    horizontal: (limit) => { console.log(limit) }, // 'left', 'right' or 'h_center'
   })
 ```
